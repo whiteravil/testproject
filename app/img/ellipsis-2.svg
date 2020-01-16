@@ -1,0 +1,16 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+ 	xmlns:xlink="http://www.w3.org/1999/xlink"
+ 	fill="transparent"
+ 	stroke-width="2"
+ 	opacity="0.102">
+ 	<defs>
+ 		<linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="0%" y2="100%">
+		  <stop offset="0%" stop-color="rgb(135,227,25)" stop-opacity="1" />
+		  <stop offset="0%" stop-color="rgb(14,114,183)" stop-opacity="1" />
+		  <stop offset="100%" stop-color="rgb(40,43,100)" stop-opacity="1" />
+		</linearGradient>
+ 	</defs>
+	<ellipse cx="-740" cy="-30" rx="1087" ry="704" stroke="url(#PSgrad_0)"></ellipse>
+	<ellipse cx="-145" cy="-90" rx="1100" ry="704" stroke="url(#PSgrad_0)"></ellipse>
+</svg>

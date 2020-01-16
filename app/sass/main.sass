@@ -1,0 +1,596 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #a8b2bf
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $font
+	overflow-x: hidden
+	color: $text
+	font-weight: 500
+	background-color: #fafaff
+	min-width: 1200px
+
+header
+	position: fixed
+	z-index: 100
+	top: 0
+	left: 0
+	width: 100%
+
+h2
+	font-size: 36px
+	font-weight: 500
+
+h3
+	font-size: 24px
+	font-weight: 500
+
+h4
+	font-size: 16px
+	font-weight: 500
+
+section
+	position: relative
+	padding:
+		top: 150px
+		bottom: 150px
+
+ul
+	list-style-type: none
+	padding: 0
+	margin: 0
+	li
+		position: relative
+		padding-left: 16px
+		margin-bottom: 17px
+		&:after
+			content: ''
+			position: absolute
+			top: 10px
+			left: 0
+			width: 5px
+			height: 5px
+			border-radius: 50%
+			background-color: #16afe0
+
+.main-window
+	position: relative
+	clip-path: ellipse(calc(100vw + 450px) 100% at 50% 0)
+	overflow: hidden
+	z-index: 1
+
+.header
+	padding:
+		top: 18px
+		bottom: 18px
+	transition: $time
+	&__row
+		display: flex
+		align-items: center
+	&__logo
+		margin-right: auto
+		margin-top: 5px
+	&__menu
+		padding-right: 70px
+		margin-top: -4px
+	&-sticky
+		padding:
+			top: 10px
+			bottom: 10px
+		background-color: #356DA5
+		box-shadow: 0px 1px 18px 0px rgba(2,36,24,.25)
+
+.container
+	max-width: 1200px
+	width: 100%
+	padding: 0 20px
+	margin: 0 auto
+
+.logo
+	display: flex
+	img
+		width: 200px
+		height: auto
+
+.menu
+	display: flex
+	&__link
+		margin-right: 50px
+		transition: $time
+		text-decoration: none
+		color: #fff
+		font-weight: 700
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			bottom: -7px
+			left: 50%
+			margin-left: -4px
+			width: 4px
+			height: 4px
+			background-color: #fff
+			border-radius: 50%
+			opacity: 0
+			transition: $time
+		&:last-child
+			margin-right: 0
+		&:hover,
+		&.active
+			color: #fff
+			text-decoration: none
+			&:after
+				opacity: 1
+
+.btn
+	display: inline-block
+	text-align: center
+	height: 60px
+	line-height: 60px
+	font-weight: 500
+	border-radius: 30px
+	color: #fff
+	background-color: $accent
+	padding: 0 30px
+	transition: $time
+	text-decoration: none !important
+	outline: none !important
+	border: none
+	&:hover
+		color: #fff
+		background-color: $hover
+
+.btn-border
+	background-color: transparent
+	border: 2px solid #5489c3
+	line-height: 53px
+	padding: 0 34px
+	&:hover
+		border-color: #5489c3
+		background-color: #5489c3
+
+.main-info
+	text-align: center
+	color: #fff
+	position: relative
+	z-index: 2
+	.owl-dots
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 47px
+	.owl-item
+		backface-visibility: hidden
+		transform: translate3d(0, 0, 0) scale(1.0, 1.0)
+
+.banners
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 0
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient( -90deg, rgb(135,227,25) 0%, rgb(14,114,183) 0%, rgb(40,43,100) 100%)
+		opacity: .85
+		z-index: 0
+	&__item
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		transition: all 1s ease
+		opacity: 0
+		&:first-child
+			opacity: 1
+
+.main-info__item
+	padding:
+		top: 180px
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center bottom
+	height: 751px
+	h2
+		margin-bottom: 35px
+	p
+		font-size: 24px
+		margin-bottom: 50px
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-size: 100%
+		background-repeat: no-repeat
+		background-position: bottom left
+		background-image: url(../img/ellipsis.svg)
+
+.main-info__item-container
+	max-width: 760px
+	margin: 0 auto
+	position: relative
+	z-index: 1
+
+.owl-dots
+	height: 16px
+	display: inline-flex
+	margin-left: auto
+	margin-right: auto
+	padding: 0 11px
+	border: 1px solid #5489c3
+	border-radius: 8px
+	button
+		width: 16px
+		margin: 0 4px
+		outline: none !important
+		display: flex
+		align-items: center
+		span
+			display: inline-block
+			height: 1px
+			background-color: #5489c3
+			width: 100%
+			transition: $time
+		&:hover,
+		&.active
+			span
+				background-color: #fff !important
+
+.svg-decor
+	position: absolute
+	height: 100%
+	width: 100%
+	top: 0
+	left: 50%
+	transform: translate(-50%)
+	z-index: 1
+	stroke: rgba(248, 248, 248, 1)
+	fill: transparent
+	stroke-width: 1
+	max-width: 1920px
+
+.s-about
+	padding-bottom: 0
+	&:after
+		content: ''
+		position: absolute
+		top: -75px
+		left: 0
+		width: 100%
+		height: 100%
+		background-size: 100%
+		background-repeat: no-repeat
+		background-position: bottom left
+		background-image: url(../img/ellipsis-2.svg)
+		z-index: 0
+
+.about
+	display: flex
+	max-width: 980px
+	margin: 0 auto
+	position: relative
+	z-index: 1
+	padding-left: 33px
+	padding-bottom: 80px
+	&__img
+		margin-right: 42px
+		position: relative
+		z-index: 1
+		img
+			width: 335px
+	&__text
+		position: relative
+		z-index: 1
+		padding:
+			top: 83px
+		h2
+			margin-bottom: 17px
+		ul
+			margin-bottom: 35px
+			padding-right: 90px
+		.btn
+			padding: 0 36px
+	&__bg
+		position: absolute
+		bottom: -58px
+		right: -376px
+		z-index: 0
+		img
+			width: 489px
+
+.s-functions
+	background-color: #F1F3FB
+	clip-path: ellipse(calc(100vw + 450px) 100% at 50% 100%)
+	z-index: 1
+	padding-bottom: 95px
+
+.section-title
+	text-align: center
+	padding-bottom: 51px
+	h2
+		margin: 0
+
+.functions
+	display: flex
+	flex-wrap: wrap
+	&__item
+		text-align: center
+		width: 100%
+		max-width: 33.33333%
+		flex: 0 0 33.33333%
+		margin-bottom: 65px
+		&__img
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 80px
+			height: 80px
+			border-radius: 50%
+			border: 1px solid rgba(#16afe0, .25)
+			margin:
+				left: auto
+				right: auto
+				bottom: 20px
+			img
+				width: 32px
+
+.s-opportunities
+	background-image: url(../img/ellipsis-3.png)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+
+.opportunities
+	display: flex
+	margin: 0 -47px
+	padding-top: 8px
+	&__list
+		flex: 0 0 54%
+	&__item
+		display: flex
+		margin-bottom: 34px
+		&__nmb
+			width: 101px
+			flex: 0 0 101px
+			overflow: hidden
+			margin-right: 9px
+			span
+				display: inline-block
+				font-size: 60px
+				line-height: 120px
+				width: 123px
+				flex: 0 0 123px
+				height: 123px
+				border-radius: 50%
+				text-align: center
+				color: #23b3e2
+				border: 1px solid rgba(#16afe0, .25)
+		&__content
+			padding-top: 30px
+	&__img
+		flex: 0 0 46%
+		padding:
+			top: 32px
+			left: 31px
+
+.s-specialists
+	background-color: #F2F2F9
+	padding:
+		top: 0
+		bottom: 117px
+
+.specialists
+	display: flex
+	max-width: 1920px
+	margin: 0 auto
+	&__img
+		flex: 0 0 47.2%
+		max-width: 47.2%
+		width: 100%
+		img
+			width: 100%
+			margin-top: -84px
+	&__content
+		padding:
+			top: 83px
+			left: 33px
+			right: 20px
+		flex: 0 0 635px
+		width: 100%
+		h2
+			margin-bottom: 30px
+		ul
+			li
+				margin-bottom: 15px
+
+.s-callback
+	background-color: #E2E8F4
+	padding:
+		top: 140px
+		bottom: 160px
+	.section-title
+		padding-bottom: 40px
+
+.form
+	max-width: 600px
+	margin: 0 auto
+	position: relative
+	> *
+		transition: all .6s ease
+	&.submitted
+		> *
+			filter: blur(13px)
+		cursor: default
+		.form__success
+			transform: translateY(0)
+			opacity: 1
+			z-index: 5
+			visibility: visible
+	h3
+		text-align: center
+		margin-bottom: 55px
+	&__row
+		display: flex
+		justify-content: center
+		align-items: flex-start
+		padding:
+			left: 20px
+			right: 20px
+		button
+			padding: 0 40px
+	&__label
+		flex: 1
+		margin-bottom: 0
+		display: block
+		margin-right: 40px
+		position: relative
+	&__input
+		width: 100%
+		height: 60px
+		border-radius: 30px
+		border: 1px solid #4f699b
+		background-color: transparent
+		appearance: none
+		box-shadow: none
+		padding-left: 19px
+		font-weight: 300
+		transition: $time
+		&::placeholder
+			transition: $time
+		&:focus
+			&::placeholder
+				opacity: 0
+				transform: translateY(-100%)
+		&.error
+			border-color: red
+	&__success
+		position: absolute
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+		display: flex
+		text-align: center
+		align-items: center
+		justify-content: center
+		font-size: 21px
+		transform: translateY(-20px)
+		opacity: 0
+		z-index: -1
+		visibility: hidden
+		filter: none!important
+
+.label__error
+	font-size: 12px
+	color: red
+	display: block
+	position: absolute
+	top: 100%
+	margin-top: 5px
+	transition: $time
+	opacity: 0
+	transform: translateY(20px)
+	padding-left: 22px
+	&.active
+		opacity: 1
+		transform: translateY(0)
+
+.footer
+	background-color: #39649D
+	padding:
+		top: 60px
+		bottom: 29px
+	&__row
+		display: flex
+		align-items: center
+		padding-bottom: 45px
+	&__logo
+		margin-right: auto
+		img
+			width: 160px
+	&__menu
+		display: flex
+		a
+			margin-right: 73px
+			transition: $time
+			text-decoration: none
+			color: #fff
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				bottom: -7px
+				left: 50%
+				margin-left: -4px
+				width: 4px
+				height: 4px
+				background-color: #fff
+				border-radius: 50%
+				opacity: 0
+				transition: $time
+			&:hover
+				color: #fff
+				text-decoration: none
+				&:after
+					opacity: 1
+	&__phone
+		a
+			transition: $time
+			text-decoration: none
+			color: #fff
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				bottom: -7px
+				left: 50%
+				margin-left: -4px
+				width: 4px
+				height: 4px
+				background-color: #fff
+				border-radius: 50%
+				opacity: 0
+				transition: $time
+			&:hover
+				color: #fff
+				text-decoration: none
+				&:after
+					opacity: 1
+	&__copyright
+		text-align: center
+		border-top: 1px solid #335b91
+		padding-top: 32px
+		font-weight: normal
+		font-size: 14px
+		color: #fff
+		a
+			color: #e70067
+
+@import media
